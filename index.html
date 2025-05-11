@@ -3,9 +3,29 @@
     <title>Character Encoding Converter</title>
     <head>
         <meta charset="UTF-8">
-        <script src="https://cdn.jsdelivr.net/npm/text-encoding/lib/encoding.min.js"></script>
+        <script>
+            function loadEncodingJS(){
+                let localEncodingJS=document.createElement("script");
+                localEncodingJS.src="encoding.js";
+                console.log("CDN failed, loading with local encoding.js instead.");
+                document.head.appendChild(localEncodingJS);
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/text-encoding/lib/encoding.min.js" onerror="loadEncodingJS()"></script>
+        <style>
+
+        </style>
     </head>
     <body>
+        <header>
+
+        </header>
+        <main>
+
+        </main>
+        <footer>
+            
+        </footer>
         <script src="script.js"></script>
     </body>
 </html>
